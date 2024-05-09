@@ -9,7 +9,7 @@ import { Author } from "../entities/Author.entity";
 export class AuthorService {
   constructor(
     @InjectRepository(Author)
-    private readonly authorRepository: Repository<Author>
+    private readonly authorRepository: Repository<Author>,
   ) {}
 
   async createAuthor(authorDto: CreateAuthorDto): Promise<CreateAuthorDto> {

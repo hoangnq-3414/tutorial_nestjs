@@ -1,24 +1,24 @@
 // src/entities/Book.ts
-import { Author } from '../../Author/entities/Author.entity';
-import { BookGenre } from '../../BookGenre/entities/BookGenre.entity';
-import { BookInstance } from '../../BookInstance/entities/BookInstance.entity';
+import { Author } from "../../Author/entities/Author.entity";
+import { BookGenre } from "../../BookGenre/entities/BookGenre.entity";
+import { BookInstance } from "../../BookInstance/entities/BookInstance.entity";
 import {
   Entity,
   PrimaryGeneratedColumn,
   Column,
   ManyToOne,
   OneToMany,
-} from 'typeorm';
+} from "typeorm";
 
 @Entity()
 export class Book {
-  @PrimaryGeneratedColumn({ name: 'book_id' })
+  @PrimaryGeneratedColumn({ name: "book_id" })
   bookId: number;
 
   @Column()
   title: string;
 
-  @Column('text')
+  @Column("text")
   summary: string;
 
   @Column()
@@ -35,6 +35,6 @@ export class Book {
 
   // Phương thức getter cho URL
   get url(): string {
-    return 'something';
+    return "something";
   }
 }

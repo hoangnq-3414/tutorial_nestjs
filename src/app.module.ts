@@ -11,6 +11,8 @@ import { Genre } from "./Genre/entities/Genre.entity";
 import { BookGenre } from "./BookGenre/entities/BookGenre.entity";
 import { APP_FILTER } from "@nestjs/core";
 import { AllExceptionsFilter } from "./common/all-exceptions.filter";
+import { BookModule } from "./Book/Book.module";
+import { BookInstanceModule } from "./BookInstance/BookInstance.module";
 
 @Module({
   imports: [
@@ -30,6 +32,8 @@ import { AllExceptionsFilter } from "./common/all-exceptions.filter";
       synchronize: false,
     }),
     AuthorModule,
+    BookModule,
+    BookInstanceModule,
   ],
   controllers: [AppController],
   providers: [
